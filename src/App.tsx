@@ -66,7 +66,7 @@ function App() {
           <input value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)} type="password" name="repeat-password" id="repeat-password" onBlur={checkErrorOnRepeatPassword} />
           {heuristic && isThereErrorOnRepeatPassword && <p className='danger'>Senhas diferentes</p>}
 
-          {!heuristic && isThereErrorOnPassword && isThereErrorOnRepeatPassword && isThereErrorOnUsername && <p className='danger'>Preencha os campos corretamente</p>}
+          {isThereErrorOnPassword && isThereErrorOnRepeatPassword && isThereErrorOnUsername && <p className='danger'>Preencha os campos corretamente</p>}
         </form>
       </main>
     </div>
